@@ -13,7 +13,7 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "BlazorHostedAppExample.Shar
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "BlazorServerExample", "BlazorServerExample\BlazorServerExample.csproj", "{476B29A3-60EE-4721-B551-33F084C0A6A5}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "BlazorWeBAssemblyEmptyExample", "BlazorWeBAssemblyEmptyExample\BlazorWeBAssemblyEmptyExample.csproj", "{742AE024-2C7F-491D-A0CF-9DAC4BA6CAC7}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "BlazorWebAssemblyEmptyExample", "BlazorWebAssemblyEmptyExample\BlazorWebAssemblyEmptyExample.csproj", "{742AE024-2C7F-491D-A0CF-9DAC4BA6CAC7}"
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "BlazorServerEmptyExample", "BlazorServerEmptyExample\BlazorServerEmptyExample.csproj", "{40ED151C-1A75-4748-9C01-CF347814FF94}"
 EndProject
