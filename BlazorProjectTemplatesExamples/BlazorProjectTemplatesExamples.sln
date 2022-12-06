@@ -3,19 +3,21 @@ Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio Version 17
 VisualStudioVersion = 17.4.33110.190
 MinimumVisualStudioVersion = 10.0.40219.1
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "BlazorWebAssemblyExample", "BlazorWebAssemblyExample\BlazorWebAssemblyExample.csproj", "{D133099F-9A46-47E5-8605-C0E0C416EB66}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "BlazorWebAssemblyExample", "BlazorWebAssemblyExample\BlazorWebAssemblyExample.csproj", "{D133099F-9A46-47E5-8605-C0E0C416EB66}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "BlazorHostedAppExample.Server", "BlazorHostedAppExample\Server\BlazorHostedAppExample.Server.csproj", "{C4ED4258-837E-486D-A07F-B9EA61AAFCD9}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "BlazorHostedAppExample.Server", "BlazorHostedAppExample\Server\BlazorHostedAppExample.Server.csproj", "{C4ED4258-837E-486D-A07F-B9EA61AAFCD9}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "BlazorHostedAppExample.Client", "BlazorHostedAppExample\Client\BlazorHostedAppExample.Client.csproj", "{19B05C8A-7BBB-4178-BDCD-6C27D48F3007}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "BlazorHostedAppExample.Client", "BlazorHostedAppExample\Client\BlazorHostedAppExample.Client.csproj", "{19B05C8A-7BBB-4178-BDCD-6C27D48F3007}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "BlazorHostedAppExample.Shared", "BlazorHostedAppExample\Shared\BlazorHostedAppExample.Shared.csproj", "{FD39D9AC-0933-4A74-A849-23D320B2AFE8}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "BlazorHostedAppExample.Shared", "BlazorHostedAppExample\Shared\BlazorHostedAppExample.Shared.csproj", "{FD39D9AC-0933-4A74-A849-23D320B2AFE8}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "BlazorServerExample", "BlazorServerExample\BlazorServerExample.csproj", "{476B29A3-60EE-4721-B551-33F084C0A6A5}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "BlazorServerExample", "BlazorServerExample\BlazorServerExample.csproj", "{476B29A3-60EE-4721-B551-33F084C0A6A5}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "BlazorWebAssemblyEmptyExample", "BlazorWebAssemblyEmptyExample\BlazorWebAssemblyEmptyExample.csproj", "{742AE024-2C7F-491D-A0CF-9DAC4BA6CAC7}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "BlazorWebAssemblyEmptyExample", "BlazorWebAssemblyEmptyExample\BlazorWebAssemblyEmptyExample.csproj", "{742AE024-2C7F-491D-A0CF-9DAC4BA6CAC7}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "BlazorServerEmptyExample", "BlazorServerEmptyExample\BlazorServerEmptyExample.csproj", "{40ED151C-1A75-4748-9C01-CF347814FF94}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "BlazorServerEmptyExample", "BlazorServerEmptyExample\BlazorServerEmptyExample.csproj", "{40ED151C-1A75-4748-9C01-CF347814FF94}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "RazorClassLibraryExample", "RazorClassLibraryExample\RazorClassLibraryExample.csproj", "{0C47C72F-5240-4C6F-8620-C33A71EC5291}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -51,6 +53,10 @@ Global
 		{40ED151C-1A75-4748-9C01-CF347814FF94}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{40ED151C-1A75-4748-9C01-CF347814FF94}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{40ED151C-1A75-4748-9C01-CF347814FF94}.Release|Any CPU.Build.0 = Release|Any CPU
+		{0C47C72F-5240-4C6F-8620-C33A71EC5291}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{0C47C72F-5240-4C6F-8620-C33A71EC5291}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{0C47C72F-5240-4C6F-8620-C33A71EC5291}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{0C47C72F-5240-4C6F-8620-C33A71EC5291}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
