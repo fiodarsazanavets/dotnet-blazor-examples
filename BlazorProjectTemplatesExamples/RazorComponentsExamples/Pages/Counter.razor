@@ -1,0 +1,25 @@
+﻿@page "/counter"
+@implements ICounter
+@namespace RazorComponentsExamples.Pages
+
+<PageTitle>Counter</PageTitle>
+
+<h1>Counter</h1>
+
+<p role="status">Current count: @currentCount</p>
+
+<button @attributes=attributes @onclick="IncrementCount">Click me</button>
+
+@code {
+    private int currentCount = 0;
+
+    private Dictionary<string, object> attributes => new()
+    {
+        { "class", "btn btn-primary" }
+    };
+
+    public void IncrementCount()
+    {
+        currentCount++;
+    }
+}
