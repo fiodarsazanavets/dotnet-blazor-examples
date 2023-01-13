@@ -1,11 +1,96 @@
 ﻿@page "/"
+@inject ILogger<Index> Logger
 
 <PageTitle>Index</PageTitle>
 
-<h1>Hello, world!</h1>
+<h1>Submit a car design</h1>
 
 <HeadContent>
     <meta name="description" content="Custom Head Content">
 </HeadContent>
 
-Welcome to your new app.
+<EditForm Model="@car" OnValidSubmit="@HandleSubmit">
+    <DataAnnotationsValidator />
+    <ValidationSummary />
+
+    <p>
+        <label>
+            Make:
+            <InputText @bind-Value="car.Make" />
+        </label>
+    </p>
+    <p>
+        <label>
+            Model:
+            <InputTextArea @bind-Value="car.Model" />
+        </label>
+    </p>
+    <p>
+        <label>
+            Vehicle Classification:
+            <InputSelect @bind-Value="car.Classification">
+                <option value="">Select classification ...</option>
+                <option value="Hatchback">Hatchback</option>
+                <option value="SUV">SUV</option>
+                <option value="Sports Car">Sports Car</option>
+            </InputSelect>
+        </label>
+    </p>
+    <p>
+        <label>
+            Maximum Passengers:
+            <InputNumber @bind-Value="car.MaximumPassengers" />
+        </label>
+    </p>
+    <p>
+        <label>
+            Design Validated:
+            <InputCheckbox @bind-Value="car.IsValidatedDesign" />
+        </label>
+    </p>
+    <p>
+        <label>
+            Production Date:
+            <InputDate @bind-Value="car.ProductionDate" />
+        </label>
+    </p>
+
+    <p>
+    <label>
+        Upload up to 3 attachements:
+        <InputFile OnChange="@LoadFiles" multiple />
+    </label>
+</p>
+
+<button type="submit">Submit</button>
+
+</EditForm>
+
+@code {
+    private Car car = new() { ProductionDate = DateTime.UtcNow };
+
+    private void HandleSubmit()
+    {
+        Logger.LogInformation("Form Submitted");
+    }
+
+    private async Task LoadFiles(InputFileChangeEventArgs e)
+    {
+        foreach (var file in e.GetMultipleFiles(3))
+        {
+            try
+            {
+                var trustedFileNameForFileStorage = Path.GetRandomFileName();
+                var path = "temp";
+
+                await using FileStream fs = new(path, FileMode.Create);
+                await file.OpenReadStream(1024 * 15).CopyToAsync(fs);
+            }
+            catch (Exception ex)
+            {
+                Logger.LogError("File: {Filename} Error: {Error}",
+                    file.Name, ex.Message);
+            }
+        }
+    }
+}

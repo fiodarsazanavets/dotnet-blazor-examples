@@ -27,7 +27,9 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "RazorComponentLifecycleDemo
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "BlazorCodeBehindDemo", "BlazorCodeBehindDemo\BlazorCodeBehindDemo.csproj", "{6E302F9F-8F5B-4F07-BE81-B285921AD3B2}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "InbuiltComponentsDemo", "InbuiltComponentsDemo\InbuiltComponentsDemo.csproj", "{7C88C5DE-8C80-49A0-8B10-F8B1D8211718}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "InbuiltComponentsDemo", "InbuiltComponentsDemo\InbuiltComponentsDemo.csproj", "{7C88C5DE-8C80-49A0-8B10-F8B1D8211718}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "TemplatedComponentsDemo", "TemplatedComponentsDemo\TemplatedComponentsDemo.csproj", "{DF24DD0D-1FF7-4BDF-BD76-53E93156952C}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -87,6 +89,10 @@ Global
 		{7C88C5DE-8C80-49A0-8B10-F8B1D8211718}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{7C88C5DE-8C80-49A0-8B10-F8B1D8211718}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{7C88C5DE-8C80-49A0-8B10-F8B1D8211718}.Release|Any CPU.Build.0 = Release|Any CPU
+		{DF24DD0D-1FF7-4BDF-BD76-53E93156952C}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{DF24DD0D-1FF7-4BDF-BD76-53E93156952C}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{DF24DD0D-1FF7-4BDF-BD76-53E93156952C}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{DF24DD0D-1FF7-4BDF-BD76-53E93156952C}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
