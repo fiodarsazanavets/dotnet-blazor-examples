@@ -1,0 +1,12 @@
+﻿@page "/"
+
+<CascadingValue Value="@counterConfig">
+    <Counter />
+</CascadingValue>
+
+@code {
+    private CounterConfig counterConfig = new CounterConfig
+        {
+            Increment = 5
+        };
+}

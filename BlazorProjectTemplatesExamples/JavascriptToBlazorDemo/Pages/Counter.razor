@@ -1,0 +1,43 @@
+﻿@page "/counter"
+@inject IJSRuntime JS
+
+<PageTitle>Counter</PageTitle>
+
+<h1>Counter</h1>
+
+<p role="status">Current count: @currentCount</p>
+
+<button class="btn btn-primary" @onclick="IncrementCount">Click me</button>
+
+@code {
+    private int currentCount = 0;
+    private DotNetObjectReference<Counter>? objectReference;
+
+    private async Task IncrementCount()
+    {
+        await JS.InvokeVoidAsync("incrementCount", currentCount, objectReference);
+    }
+
+    protected override void OnInitialized()
+    {
+        objectReference = DotNetObjectReference.Create(this);
+    }
+
+    [JSInvokable]
+    public static async Task<int> IncrementNumber(IJSObjectReference jsObjectRef, int originalNumber)
+    {
+        originalNumber++;
+        return await Task.FromResult(originalNumber);
+    }
+
+    [JSInvokable]
+    public async Task UpdateIncrement(int newNumber)
+    {
+        currentCount = newNumber;
+    }
+
+    public void Dispose()
+    {
+        objectReference?.Dispose();
+    }
+}
