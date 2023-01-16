@@ -1,0 +1,55 @@
+﻿@page "/fetchdata"
+@inject HttpClient Http
+
+<PageTitle>Weather forecast</PageTitle>
+
+<h1>Weather forecast</h1>
+
+<p>This component demonstrates fetching data from the server.</p>
+
+<table class="table">
+        <thead>
+            <tr>
+                <th>Date</th>
+                <th>Temp. (C)</th>
+                <th>Temp. (F)</th>
+                <th>Summary</th>
+            </tr>
+        </thead>
+        <tbody>
+        <Virtualize ItemsProvider="@LoadForecasts" Context="forecast">
+                <tr>
+                    <td>@forecast.Date.ToShortDateString()</td>
+                    <td>@forecast.TemperatureC</td>
+                    <td>@forecast.TemperatureF</td>
+                    <td>@forecast.Summary</td>
+                </tr>
+            </Virtualize>
+        </tbody>
+    </table>
+
+@code {
+
+    private async ValueTask<ItemsProviderResult<WeatherForecast>> LoadForecasts(
+     ItemsProviderRequest request)
+    {
+        var forecasts = await Http.GetFromJsonAsync<WeatherForecast[]>("sample-data/weather.json");
+        var totalForecasts = forecasts?.Length ?? 0;
+
+        var forecastsToLoad = Math.Min(request.Count,
+            totalForecasts - request.StartIndex);
+        var loadedForecasts = forecasts?.Skip(request.StartIndex).Take(forecastsToLoad);
+        return new ItemsProviderResult<WeatherForecast>(loadedForecasts, totalForecasts);
+    }
+
+    public class WeatherForecast
+    {
+        public DateOnly Date { get; set; }
+
+        public int TemperatureC { get; set; }
+
+        public string? Summary { get; set; }
+
+        public int TemperatureF => 32 + (int)(TemperatureC / 0.5556);
+    }
+}
