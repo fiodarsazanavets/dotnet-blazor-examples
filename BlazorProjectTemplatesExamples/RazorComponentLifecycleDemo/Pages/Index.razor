@@ -11,6 +11,12 @@
 @code {
     private string lastEventFired = string.Empty;
 
+    public override async Task SetParametersAsync(ParameterView parameters)
+    {
+        lastEventFired = "SetParametersAsync";
+        Logger.LogInformation("SetParametersAsync fired");
+    }
+
     protected override async Task OnInitializedAsync()
     {
         lastEventFired = "OnInitializedAsync";
