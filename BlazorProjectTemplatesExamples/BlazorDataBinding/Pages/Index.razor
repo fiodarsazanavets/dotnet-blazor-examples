@@ -21,6 +21,15 @@
     Favorite Weekday: @string.Join(", ", selectedDays)
 </p>
 
+<label>
+    Special paste:
+    <input @onspecialpaste="HandleSpecialPaste" />
+</label>
+
+<p>
+    @pasteStatus
+</p>
+
 @code {
     private string[] selectedDays = new string[] { };
 
@@ -31,4 +40,12 @@
             selectedDays = (string[])e.Value;
         }
     }
+
+    private string? pasteStatus;
+
+    private void HandleSpecialPaste(SpecialPasteEventArgs eventArgs)
+    {
+        pasteStatus = $"Pasted content: {eventArgs.PastedData}";
+    }
+
 }

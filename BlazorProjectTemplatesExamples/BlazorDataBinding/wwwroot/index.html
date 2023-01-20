@@ -27,6 +27,16 @@
         <a class="dismiss">🗙</a>
     </div>
     <script src="_framework/blazor.webassembly.js"></script>
+    <script>
+        Blazor.registerCustomEventType('specialpaste', {
+            browserEventName: 'paste',
+            createEventArgs: event => {
+                return {
+                    pastedData: event.clipboardData.getData('text')
+                };
+            }
+        });
+    </script>
 </body>
 
 </html>
